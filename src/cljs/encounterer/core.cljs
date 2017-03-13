@@ -8,6 +8,8 @@
               [encounterer.views :as views]
               [encounterer.config :as config]
               encounterer.firebase
+              cljsjs.bootstrap
+              cljsjs.jquery
               cljsjs.bootstrap))
 
 (defn dev-setup []

@@ -9,7 +9,7 @@
 
 (defn view []
   (let [user (re-frame/subscribe [:user])]
-    [:nav.navbar.navbar-default
+    [:nav.navbar.navbar-inverse.navbar-static-top
      [:div.container-fluid
       [:div.navbar-header
        [:button.navbar-toggle.collapsed {:role          "button"

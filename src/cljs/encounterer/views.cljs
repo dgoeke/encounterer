@@ -14,14 +14,14 @@
   (let [route (re-frame/subscribe [:route])]
     [:div
      [navbar/view]
-     (route->view @route)]))
+     [:div.container-fluid
+      (route->view @route)]]))
 
 (defn loading-view []
   [:div "Loading and checking authentication..."])
 
 (defn main-app-window []
   (let [state (re-frame/subscribe [:app-state])]
-    [:div.container
-     (if (= @state :loading)
-       [loading-view]
-       [current-route-view])]))
+    (if (= @state :loading)
+      [loading-view]
+      [current-route-view])))

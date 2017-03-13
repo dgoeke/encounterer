@@ -60,7 +60,7 @@
      :source-paths ["src/cljs"]
      :compiler     {:main            encounterer.core
                     :output-to       "resources/public/js/compiled/app.js"
-                    :optimizations   :advanced
+                    :optimizations   :whitespace #_:advanced
                     :closure-defines {goog.DEBUG false}
                     :pretty-print    false}}
 
